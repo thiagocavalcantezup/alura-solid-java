@@ -8,8 +8,8 @@ public class Funcionario {
     private DadosPessoais dadosPessoais;
     private LocalDate dataUltimoReajuste;
 
-    public Funcionario(DadosPessoais dadosPessoais) {
-        this.dadosPessoais = dadosPessoais;
+    public Funcionario(String nome, String cpf, Cargo cargo, BigDecimal salario) {
+        this.dadosPessoais = new DadosPessoais(nome, cpf, cargo, salario);
     }
 
     public void atualizarSalario(BigDecimal novoSalario) {
